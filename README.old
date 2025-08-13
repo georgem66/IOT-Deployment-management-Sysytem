@@ -1,0 +1,56 @@
+You are to design and build a professional-grade *Secure IoT Deployment Management System* that demonstrates expertise in *network and security engineering* while being achievable for a highly skilled student project.
+
+### Project Overview
+The system should allow users to:
+1. *Register and monitor IoT devices* (e.g., Raspberry Pi, smart sensors, cameras) through a secure dashboard.
+2. *Automate vulnerability scanning* for all registered devices and display risk levels.
+3. *Detect anomalous device behavior* using lightweight network traffic analysis (e.g., unexpected IP destinations, abnormal bandwidth usage).
+4. *Send real-time security alerts* via email and dashboard notifications when threats are detected.
+5. *Provide secure firmware update deployment* to IoT devices remotely.
+
+### Core Requirements
+- *Architecture*:  
+  - Backend: Node.js (NestJS or Express) or Python (FastAPI or Django REST).  
+  - Frontend: React.js or Vue.js (responsive, mobile-friendly).  
+  - Database: PostgreSQL or MongoDB (whichever fits best).  
+  - Optional: Redis for caching device data.
+- *Security*:  
+  - JWT-based authentication with role-based access control (admin, standard user).  
+  - All communication over TLS/HTTPS.  
+  - Device communication encrypted with TLS and mutual authentication.  
+  - Input sanitization and OWASP Top 10 compliance.
+- *Device Integration*:  
+  - Lightweight Python/Node agent script to install on IoT devices.  
+  - Agent sends periodic heartbeat & telemetry (CPU, memory, network traffic) to the backend API.
+- *Vulnerability Scanning*:  
+  - Integrate open-source scanning tools (e.g., OpenVAS, Nmap scripts) via backend service.  
+  - Store scan results and present them visually in the dashboard.
+- *Anomaly Detection*:  
+  - Implement a basic rules-based anomaly engine that flags unusual patterns in telemetry.  
+  - Optional: Add simple ML anomaly detection using scikit-learn.
+
+### UI/UX Features
+- Modern, minimalistic dashboard with device list, security score, and alert feed.
+- Device detail page showing live telemetry, recent scans, and logs.
+- Graphs and charts for traffic patterns, CPU usage, and security trends.
+
+### Additional Functionalities
+- Export device data and scan reports as PDF/CSV.
+- Firmware upload feature for admin to push signed updates to devices.
+- Audit logs for all admin actions.
+
+### Development Notes
+- Prioritize clean, modular code with comments for educational clarity.
+- Use Docker for containerized development.
+- Provide an installation script and README with setup instructions.
+- Include a test suite (Jest/Pytest) for core features.
+- Make it scalable for future enhancements like AI-driven intrusion detection.
+
+### Deliverables
+1. Fully functional Secure IoT Deployment Management System (frontend + backend + device agent).
+2. Database schema and API documentation (Swagger/OpenAPI).
+3. Deployment guide for local dev and cloud hosting.
+4. Security hardening checklist used during development.
+5. Demo dataset for simulating multiple IoT devices.
+
+Ensure the final product feels *enterprise-grade* in structure and security, but is still *achievable for a highly competent student* within a few weeks of focused work. Prioritize *clarity, scalability, and real-world relevance* so it can be showcased in a bursary application for a network & security engineering programme.
